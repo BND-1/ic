@@ -1,0 +1,158 @@
+.container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  background: #f5f5f5;
+  position: relative;
+}
+
+.header {
+  background-color: #1053ad;
+  padding: 12px;
+  text-align: center;
+
+  h1 {
+    color: white;
+    margin: 0;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 4px;
+  }
+
+  h2 {
+    color: white;
+    margin: 0;
+    font-size: 16px;
+    font-weight: normal;
+    opacity: 0.9;
+  }
+}
+
+.content {
+  flex: 1;
+  min-height: 0;
+  margin: 0 10px;
+  padding: 10px;
+  margin-bottom: 50px;
+  display: flex;
+  flex-direction: column;
+}
+
+.diagramContainer {
+  flex: 1;
+  min-height: 0;
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  
+  &:hover {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    transition: box-shadow 0.3s ease;
+  }
+}
+
+.formWrapper {
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 50px;
+  background: white;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+}
+
+.footerContent {
+  text-align: center;
+  color: #666;
+  font-size: 14px;
+}
+
+.footerButtons {
+  position: absolute;
+  right: 20px;
+  top: -20px;
+  display: flex;
+  gap: 10px;
+}
+
+.footerButton {
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  color: white;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+
+  &.sendButton {
+    background-color: #4caf50;
+    &:hover {
+      background-color: darken(#4caf50, 5%);
+    }
+  }
+
+  &.resetButton {
+    background-color: #cccccc;
+    &:hover {
+      background-color: darken(#cccccc, 5%);
+    }
+  }
+
+  &.aiButton {
+    background-color: #1565c0;
+    &:hover {
+      background-color: darken(#1565c0, 5%);
+    }
+  }
+}
+
+.formTrigger {
+  position: fixed;
+  bottom: 100px;
+  left: 40px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  z-index: 1000;
+
+  &:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  }
+
+  img {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+  }
+} 
